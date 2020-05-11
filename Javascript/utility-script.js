@@ -1,64 +1,69 @@
-// Get index value of a state by state name
+// Test getState function
+//console.log("state = " + getState(49));
+
+// Get full text version of a state by index value
 function getState(stateLk) {
   var state = new Array();
-  state[0] = "alabama";
-  state[1] = "alaska";
-  state[2] = "arizona";
-  state[3] = "arkansas";
-  state[4] = "california";
-  state[5] = "colorado";
-  state[6] = "connecticut";
-  state[7] = "delaware";
-  state[8] = "florida";
-  state[9] = "georgia";
-  state[10] = "hawaii";
-  state[11] = "idaho";
-  state[12] = "illinois";
-  state[13] = "indiana";
-  state[14] = "iowa";
-  state[15] = "kansas";
-  state[16] = "kentucky";
-  state[17] = "louisiana";
-  state[18] = "maine";
-  state[19] = "maryland";
-  state[20] = "massachusetts";
-  state[21] = "michigan";
-  state[22] = "minnesota";
-  state[23] = "mississippi";
-  state[24] = "missouri";
-  state[25] = "montana";
-  state[26] = "nebraska";
-  state[27] = "nevada";
-  state[28] = "new Hampshire";
-  state[29] = "new Jersey";
-  state[30] = "new Mexico";
-  state[31] = "new York";
-  state[32] = "north Carolina";
-  state[33] = "north Dakota";
-  state[34] = "ohio";
-  state[35] = "oklahoma";
-  state[36] = "oregon";
-  state[37] = "pennsylvania";
-  state[38] = "rhode Island";
-  state[39] = "south Carolina";
-  state[40] = "south Dakota";
-  state[41] = "tennessee";
-  state[42] = "texas";
-  state[43] = "utah";
-  state[44] = "vermont";
-  state[45] = "virginia";
-  state[46] = "washington";
-  state[47] = "west Virginia";
-  state[48] = "wisconsin";
-  state[49] = "wyoming";
+  state[0] = "Alabama";
+  state[1] = "Alaska";
+  state[2] = "Arizona";
+  state[3] = "Arkansas";
+  state[4] = "California";
+  state[5] = "Colorado";
+  state[6] = "Connecticut";
+  state[7] = "Delaware";
+  state[8] = "Florida";
+  state[9] = "Georgia";
+  state[10] = "Hawaii";
+  state[11] = "Idaho";
+  state[12] = "Illinois";
+  state[13] = "Indiana";
+  state[14] = "Iowa";
+  state[15] = "Kansas";
+  state[16] = "Kentucky";
+  state[17] = "Louisiana";
+  state[18] = "Maine";
+  state[19] = "Maryland";
+  state[20] = "Massachusetts";
+  state[21] = "Michigan";
+  state[22] = "Minnesota";
+  state[23] = "Mississippi";
+  state[24] = "Missouri";
+  state[25] = "Montana";
+  state[26] = "Nebraska";
+  state[27] = "Nevada";
+  state[28] = "New Hampshire";
+  state[29] = "New Jersey";
+  state[30] = "New Mexico";
+  state[31] = "New York";
+  state[32] = "North Carolina";
+  state[33] = "North Dakota";
+  state[34] = "Ohio";
+  state[35] = "Oklahoma";
+  state[36] = "Oregon";
+  state[37] = "Pennsylvania";
+  state[38] = "Rhode Island";
+  state[39] = "South Carolina";
+  state[40] = "South Dakota";
+  state[41] = "Tennessee";
+  state[42] = "Texas";
+  state[43] = "Utah";
+  state[44] = "Vermont";
+  state[45] = "Virginia";
+  state[46] = "Washington";
+  state[47] = "West Virginia";
+  state[48] = "Wisconsin";
+  state[49] = "Wyoming";
   var n = state[stateLk];
   return n;
 }
 
-// Test getState() function
-// console.log("state = " + getState(49));
+// Test lookUpStateIndex() function
+// Case sensitive so may need to call titleCase() first
+// var titleCaseText = titleCase("minnesota");
+// console.log("State index = " + lookUpStateIndex(titleCaseText));
 
-// Get full text version of a state by index value
+// Get index value of a state by state name
 function lookUpStateIndex(val) {
   var lookup = {
     Alabama: "1",
@@ -116,4 +121,106 @@ function lookUpStateIndex(val) {
 }
 
 // Test lookUpStateIndex() function
-// console.log("look up value = " + lookUpStateIndex("New Hampshire"));
+// Case sensitive so may need to call titleCase() first
+// var titleCaseText = titleCase("minnesota");
+// console.log("State index = " + lookUpStateIndex(titleCaseText));
+
+// Get index value of a state by state name
+function lookUpStateIndex02(val) {
+  var lookup = {
+    Maine: "0",
+    Massachusetts: "1",
+    Michigan: "2",
+    Montana: "3",
+    Nevada: "4",
+    "New Jersey": "5",
+    "New York": "6",
+    "North Carolina": "7",
+    Ohio: "8",
+    Pennsylvania: "9",
+    "Rhode Island": "10",
+    Tennessee: "11",
+    Texas: "12",
+    Utah: "13",
+    Washington: "14",
+    Wisconsin: "15",
+    "Puerto Rico": "16",
+    Maryland: "17",
+    Alabama: "18",
+    Alaska: "19",
+    Arizona: "20",
+    Arkansas: "21",
+    California: "22",
+    Colorado: "23",
+    Connecticut: "24",
+    Delaware: "25",
+    "District of Columbia": "26",
+    Florida: "27",
+    Georgia: "28",
+    Hawaii: "29",
+    Idaho: "30",
+    Illinois: "31",
+    Indiana: "32",
+    Iowa: "33",
+    Kansas: "34",
+    Kentucky: "35",
+    Louisiana: "36",
+    Minnesota: "37",
+    Mississippi: "38",
+    Missouri: "39",
+    Nebraska: "40",
+    "New Hampshire": "41",
+    "New Mexico": "42",
+    "North Dakota": "43",
+    Oklahoma: "44",
+    Oregon: "45",
+    "South Carolina": "46",
+    "South Dakota": "47",
+    Vermont: "48",
+    Virginia: "49",
+    "West Virginia": "50",
+    Wyoming: "51",
+  };
+  return lookup[val];
+}
+
+// Test titleCase
+// var txt = "new york";
+// var test = titleCase(txt);
+// console.log(test);
+
+// Function titleCase() capitalizes the first letter of each word
+function titleCase(txt) {
+  var text = txt;
+  var firstLtr = 0;
+  for (var i = 0; i < text.length; i++) {
+    if (i == 0 && /[a-zA-Z]/.test(text.charAt(i))) firstLtr = 2;
+    if (firstLtr == 0 && /[a-zA-Z]/.test(text.charAt(i))) firstLtr = 2;
+    if (firstLtr == 1 && /[^a-zA-Z]/.test(text.charAt(i))) {
+      if (text.charAt(i) == "'") {
+        if (i + 2 == text.length && /[a-zA-Z]/.test(text.charAt(i + 1)))
+          firstLtr = 3;
+        else if (i + 2 < text.length && /[^a-zA-Z]/.test(text.charAt(i + 2)))
+          firstLtr = 3;
+      }
+      if (firstLtr == 3) firstLtr = 1;
+      else firstLtr = 0;
+    }
+    if (firstLtr == 2) {
+      firstLtr = 1;
+      text =
+        text.substr(0, i) + text.charAt(i).toUpperCase() + text.substr(i + 1);
+    } else {
+      text =
+        text.substr(0, i) + text.charAt(i).toLowerCase() + text.substr(i + 1);
+    }
+  }
+  return text;
+}
+
+// Get the current numeric day of the month.
+function getNumDay() {
+  var d = new Date();
+  var n = d.getDate();
+  return n;
+}

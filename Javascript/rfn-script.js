@@ -1,8 +1,11 @@
-// Recipe - Food - Nutrition API
-// https://rapidapi.com/spoonacular/api/recipe-food-nutrition
+// *Recipe - Food - Nutrition API - - from RapidAPI.com
+// *https://rapidapi.com/spoonacular/api/recipe-food-nutrition
 
-var queryURL = buildRFNQuery("how much vitamin c is in an apple");
+// *Type in free form question when calling buildRFNQuery
 
+// *Test  Recipe - Food - Nutrition API
+// *Note - enter free form text question in buildRFNQuery string.
+// var queryURL = buildRFNQuery("how much vitamin c is in an apple");
 // console.log("RFN Query String = " + queryURL);
 
 function buildRFNQuery(rfnQueryString) {
@@ -29,21 +32,27 @@ function buildRFNQuery(rfnQueryString) {
   return rfnQueryURL;
 }
 
-var settings = {
-  async: true,
-  crossDomain: true,
-  url: queryURL,
-  method: "GET",
-  headers: {
-    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-    "x-rapidapi-key": "4f9b629588mshaf3f53eee01ba60p166742jsn4b237a2eb674",
-  },
-};
+// *Test getNutriFacs
+// *Note - need to run buildRNFQuery first to build the queryURL
+// getNutriFacts(queryURL);
 
-$.ajax(settings).done(function (response) {
-  // console.log(response);
-  var answer = response.answer;
-  var imgLink = response.image;
-  console.log(answer);
-  console.log(imgLink);
-});
+function getNutriFacts(URL) {
+  var settings = {
+    async: true,
+    crossDomain: true,
+    url: queryURL,
+    method: "GET",
+    headers: {
+      "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+      "x-rapidapi-key": "4f9b629588mshaf3f53eee01ba60p166742jsn4b237a2eb674",
+    },
+  };
+
+  $.ajax(settings).done(function (response) {
+    // console.log(response);
+    var answer = response.answer;
+    var imgLink = response.image;
+    console.log(answer);
+    console.log(imgLink);
+  });
+}
