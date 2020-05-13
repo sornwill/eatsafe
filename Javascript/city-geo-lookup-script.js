@@ -1,11 +1,14 @@
 // https://rapidapi.com/dev132/api/city-geo-location-lookup?endpoint=54954257e4b0415c068d5262
 // City Geo-Location Lookup API Documentation
 
+var city = "minnetonka";
+
 var settings = {
   async: true,
   crossDomain: true,
   url:
-    "https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=minnetonka",
+    "https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=" +
+    city,
   method: "GET",
   headers: {
     "x-rapidapi-host": "devru-latitude-longitude-find-v1.p.rapidapi.com",
