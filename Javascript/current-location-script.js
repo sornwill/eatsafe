@@ -1,30 +1,32 @@
 // Function return current latitude longitude of the calling application
+var latitude = 0;
+var longitude = 0;
 
-// var latitude = 0;
-// var longitude = 0;
+// getCurrentLocation();
 
-getCurrentLocation();
-// console.log("latitude = " + latitude);
-// console.log("longitude " + longitude);
+// function getCurrentLocation() {
+//   function onPositionReceived(position) {
+//     console.log(position);
+//     latitude = position.coords.latitude;
+//     longitude = position.coords.longitude;
+//     console.log("lat = " + latitude);
+//     console.log("lon = " + longitude);
+//   }
 
-function getCurrentLocation() {
-  function onPositionReceived(position) {
-    console.log(position);
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
-    console.log("lat = " + latitude);
-    console.log("lat = " + longitude);
-  }
+//   function locationNotReceived(postionError) {
+//     console.log(postionError);
+//   }
 
-  function locationNotReceived(postionError) {
-    console.log(postionError);
-  }
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(
+//       onPositionReceived,
+//       locationNotReceived,
+//       { timeout: 3 }
+//     );
+//   }
+// }
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      onPositionReceived,
-      locationNotReceived,
-      { timeout: 3 }
-    );
-  }
-}
+navigator.geolocation.getCurrentPosition((position) => {
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+});
