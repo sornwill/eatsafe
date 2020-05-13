@@ -1,5 +1,4 @@
-
-// MAIN
+//RESTAURANT VARS
 var name;
 var cuisineType;
 var ifDeliver;
@@ -10,15 +9,61 @@ var times;
 var phoneNum;
 var Address;
 
-navigator.geolocation.getCurrentPosition((position) =>{
-  console.log(position.coords.latitude);
-  console.log(position.coords.longitude);
-}) 
+//LOCATION VARS
+var lat = 0;
+var lon = 0;
+var city;
+var settings;
 
-getResID(44.770918400000006,-93.47072);
+// BUTTONS
+var getCurrent = $(".currentLoc");
+var searchBtn = $(".searchbtn");
 
-getDetails(resID);
+//ON CLICKS
+getCurrent.on("click", function(event){
+    event.preventDefault();
+    
+    navigator.geolocation.getCurrentPosition((position) =>{
+        console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
 
+        lat = position.coords.latitude;
+        lon = position.coords.longitude;
+        
+        getResID(lat,lon);
+        getDetails(resID);
+      }) 
+
+});
+
+searchBtn.on("click", function(event){
+    event.preventDefault();
+    geoLookUp();
+    
+    
+})
+
+
+
+//GEO STUFF
+function geoLookUp (){
+    city = "minnetonka";
+
+    settins = {
+        async: true,
+        crossDomain: true,
+        url:"https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=" + city,
+        method: "GET",
+        headers: {
+            "x-rapidapi-host": "devru-latitude-longitude-find-v1.p.rapidapi.com",
+            "x-rapidapi-key": "4f9b629588mshaf3f53eee01ba60p166742jsn4b237a2eb674",
+        }
+    }
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    })
+};
 
 
 //This function is able to get an exact city with lat,lon. Also displays nearby restaurants in the area.
@@ -88,8 +133,3 @@ function getDetails(res_id) {
       console.log("-------------------------")    
     }
 };
-
-
-
-
-
