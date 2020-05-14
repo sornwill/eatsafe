@@ -6,3 +6,28 @@ color: white;
 #section{
     padding-top: 20px;
 }
+
+#details{
+    border: red solid 1px;
+    color: black;
+    background-color:white;
+   
+    width: 600px;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+#resName{
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.resINFO{
+    height: 250px;
+    width: auto;
+    overflow: scroll;
+}
+
+#push-right{
+    padding-left: 10px;
+}
