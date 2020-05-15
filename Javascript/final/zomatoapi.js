@@ -171,8 +171,8 @@ function appendINFO() {
   details.attr("id", "details");
   details.html("Cuisine: "+ cuisineType + "</br> Address: " + address +
   "</br> Phone: " + phoneNum + "</br> Times: " + times + "</br> Delivery: " + ifDeliver +
-  "</br> <a href='" + menuURL + "'>Menu</a>" +
-  "</br> <a href='" + mainURL + "'>Zomato Website</a>");
+  "</br> <a href='" + menuURL + "'target='_blank'>Menu</a>" +
+  "</br> <a href='" + mainURL + "'target='_blank'>Zomato Website</a>");
   resINFO.append(details);
 
   // var addressINFO = $("<p>");

@@ -6,12 +6,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
-    <link rel="stylesheet" href=".css/style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="Assets/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!--<script src="script.js"></script>-->
     <title>Be Safe!</title>
 
 </head>
-<body> 
+<body>
+  
+  <div class="container">
     <!--Hero / header-->
     <section class="hero is-medium is-danger is-bold">
       <div class="hero-body">
@@ -34,14 +37,14 @@
 <div class="block">
     <form>
       <div class="field">
-        <label class="label">Would you like to know more info about the nearest restaurant?</label>
+        <label class="label" >Would you like to know more info about the nearest restaurant?</label>
 
         <div class="field has-addons">
           <div class="control">
-            <input class="input" type="text" placeholder="Enter the city name or state">
+            <input class="input" id="searchInput" type="text" placeholder="Enter the city name">
           </div>
           <div class="control">
-            <a class="button is-info is-danger">
+            <a class="button is-info is-danger searchbtn" >
               Search
             </a>
           </div>
@@ -70,13 +73,14 @@
 
           </div>
               
-            
+  </div>        
 
           <!-- <div class="footer"></div>
     <footer id="main-footer">
         <p>Be safe! & copy; 2020, All Rights Reserved</p>
     </footer> -->
-    
+  <script src="./Javascript/final/geoscript.js"></script>  
+  <script src="./Javascript/final/zomatoapi.js"></script>
     <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
 </body>
