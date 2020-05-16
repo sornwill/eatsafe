@@ -12,6 +12,7 @@
     - Geo-coding API on Rapidshare
 
 # Contributors
+
     - Cassandra Perez
     - Ahmed Bule
     - John Leintz
@@ -19,6 +20,6 @@
 
 # LINK
 
-    Deployed link: https://sornwill.github.io/eatsafe/?
+    Deployed link: https://sornwill.github.io/eatsafe/
 
 
