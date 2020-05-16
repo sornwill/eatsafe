@@ -5,7 +5,7 @@
 
 # Screenshot
 
-[screenshot](Assets/screenshot.png)
+[!screenshot](Assets/screenshot.png)
 
 # API's used
 
