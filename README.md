@@ -20,8 +20,5 @@
 
 # LINK
 
-    Deployed link: <a href="https://sornwill.github.io/eatsafe/">Eat Safe</a>
-    
-
-    [Eat Safe](https://sornwill.github.io/eatsafe/)
+[   Eat Safe](https://sornwill.github.io/eatsafe/)
 
