@@ -20,6 +20,5 @@
 
 # LINK
 
-    Deployed link: https://sornwill.github.io/eatsafe/
-
+[   Eat Safe](https://sornwill.github.io/eatsafe/)
 
