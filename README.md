@@ -1,5 +1,23 @@
-# eatsafe
-Displays covid 19 info. Information of restaurants in your area. You have access to a phone number to make sure they are still open for business, with options of doing pickups.
+## Eat Safe
+
+    This app features a search for restaurants in the city of your choosing. Then displays the restaurant name, address, cuisine types, phone number, and links to the menu and zomato website.
+
+# Screenshot
+![index](Assets\screenshot.png)
+
+# API's used
+
+    - Zomato's API 
+    - Geo-coding API on Rapidshare
+
+# Contributors
+    - Cassandra Perez
+    - Ahmed Bule
+    - John Leintz
+    - William Sorn
+
+# LINK
+
+    https://sornwill.github.io/eatsafe/
 
 
-WS: THIS IS A TEST.
